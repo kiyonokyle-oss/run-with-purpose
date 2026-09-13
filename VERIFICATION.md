@@ -15,7 +15,7 @@ The local app was rendered in the Codex browser at desktop width and at 390 × 8
 - The phone Slide button produced a grounded, 30-pixel-high sliding player. The phone Jump button produced an airborne player 122.48 pixels above ground.
 - A collision produced a game-over score of 413. Keyboard selection of the correct recall answer raised the score to 513 exactly once. A page reload retained the 513 high score.
 - The collection displayed the full acquired verse and recall count. Selecting the completed passage for practice retained that exact passage on the next run.
-- Sound toggling changed the enabled state successfully. Acoustic quality was not separately assessed with a listening test.
+- Sound toggling enabled the original procedural choir-inspired bed and changed the enabled state successfully. Pausing and resuming the run exercised the music lifecycle, and the browser diagnostics stayed empty. Acoustic quality was not separately assessed with a listening test.
 
 The initial synthetic keyboard harness dispatched an event to Document and exposed a non-Element target assumption. The handler was hardened, the harness switched to the game element, and the successful run above used the corrected code. Earlier error entries remain in the browser's session log; they are not errors from the final run.
 

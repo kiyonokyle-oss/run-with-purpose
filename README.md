@@ -1,6 +1,6 @@
 # The Narrow Path
 
-A biblical endless runner with an animated canvas wilderness, procedural rocks and branches, rising speed and density, combos, optional sound, and local progress.
+A biblical endless runner with an animated canvas wilderness, procedural rocks and branches, rising speed and density, combos, an original ambient hymn bed, and local progress.
 
 ## Run
 
@@ -31,7 +31,7 @@ The build copies static assets into `dist/`, suitable for a static hosting servi
 
 The searchable scripture library includes all 72 passages, topic filters, direct source links, and a choice to practice any passage. Previous/Next controls also let you browse outside a run.
 
-High score, fragments, chosen passage, exposure counts, and recall history use `the-narrow-path:v1` in localStorage. No accounts, telemetry, remote database, or AI-generated scripture. If browser storage is unavailable, the game continues with in-memory progress. Optional synthesized sound starts only when enabled by the player. Hidden tabs pause automatically; reduced motion disables decorative movement and collision flash.
+High score, fragments, chosen passage, exposure counts, and recall history use `the-narrow-path:v1` in localStorage. No accounts, telemetry, remote database, or AI-generated scripture. If browser storage is unavailable, the game continues with in-memory progress. Optional synthesized sound and an original, choir-inspired ambient bed start only after the player enables them. The bed fades out while paused or at game over and resumes when a run continues; no copyrighted recording or copied melody is used. Hidden tabs pause automatically; reduced motion disables decorative movement and collision flash.
 
 ## Collaboration
 
