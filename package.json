@@ -1,0 +1,13 @@
+{
+  "name": "the-narrow-path",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "launch": "node scripts/start-local.mjs",
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.js"
+  }
+}

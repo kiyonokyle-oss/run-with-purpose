@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f4ec" />
+  <meta name="description" content="Run with purpose. A biblical endless runner through the wilderness, with scripture to carry along the way." />
+  <title>The Narrow Path — Run with purpose</title>
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/library.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="The Narrow Path home"><span class="brand-mark" aria-hidden="true">✝</span><span>THE NARROW PATH<small>WALK BY FAITH. RUN WITH PURPOSE.</small></span></a>
+    <nav aria-label="Main navigation"><button class="nav-item active" id="nav-play">The journey</button><button class="nav-item" id="nav-verses">Scripture library <span id="collection-count">72</span></button><button class="help-button" id="help-button"><span aria-hidden="true">?</span> How to play</button></nav>
+  </header>
+  <main>
+    <section class="page-heading"><div><div class="eyebrow"><span class="tiny-cross">✧</span> A LITTLE FAITH. ONE MORE STEP.</div><h1>Run with purpose.</h1><p>Find your rhythm. Hold to the Word. Keep going.</p></div><div class="personal-best"><span class="trophy" aria-hidden="true">♜</span><div><span class="eyebrow">PERSONAL BEST</span><strong id="high-score">0 <small>PTS</small></strong></div></div></section>
+    <section class="game-shell" aria-label="The Narrow Path endless runner">
+      <div class="game-stage" id="game-stage" tabindex="0" aria-label="Game. Space or tap to jump. Down arrow or S to slide. P or Escape to pause.">
+        <canvas id="game-canvas" width="1200" height="540" aria-label="An illustrated runner travels through a sunlit biblical wilderness"></canvas>
+        <div class="game-vignette"></div>
+        <div class="hud"><div class="region"><span class="region-icon">✦</span><div><span class="eyebrow" id="chapter-label">CHAPTER I</span><strong id="region-label">The Wilderness</strong></div></div><div class="live-stats"><div><span class="eyebrow">SCORE</span><strong id="score">00000</strong></div><div><span class="eyebrow">DISTANCE</span><strong id="distance">0 <small>m</small></strong></div><span class="combo-pill" id="combo">×1 <span>COMBO</span></span></div><div class="game-tools"><button id="sound-button" class="icon-button" aria-label="Enable sound" aria-pressed="false"></button><button id="pause-button" class="icon-button" aria-label="Pause game" disabled></button></div></div>
+        <div class="intro-overlay" id="intro-overlay"><span class="intro-kicker">THE ROAD AHEAD IS WORTH IT</span><h2>Faith for<br>the next step.</h2><p>Leap over doubt. Slide past distraction.<br>Carry the Word with you.</p><button class="primary-button" id="start-button"><span class="play-triangle" aria-hidden="true"></span> Begin your journey <span aria-hidden="true">↗</span></button><span class="start-hint">or press <kbd>space</kbd> to begin</span></div>
+        <div class="scene-caption" id="scene-caption"><span></span> THE WILDERNESS IS ONLY THE BEGINNING</div>
+        <div class="run-toast" id="run-toast" role="status"></div>
+        <div class="phrase-popup" id="phrase-popup"><span>WORD COLLECTED</span><strong></strong></div>
+        <div class="paused-overlay hidden" id="paused-overlay"><div class="eyebrow">A MOMENT TO BREATHE</div><h2>Be still.</h2><p>Your journey will be right here.</p><button class="primary-button" id="resume-button">Continue the journey <span>→</span></button></div>
+        <div class="gameover-overlay hidden" id="gameover-overlay" role="dialog" aria-modal="true" aria-labelledby="gameover-title"><div class="end-content"><span class="eyebrow" id="end-kicker">EVERY STEP COUNTS</span><h2 id="gameover-title">Rise. And run again.</h2><div class="end-stats"><div><span>SCORE</span><strong id="end-score">0</strong></div><div><span>DISTANCE</span><strong id="end-distance">0 m</strong></div><div><span>BEST COMBO</span><strong id="end-combo">×1</strong></div></div><div class="recall-box"><span class="eyebrow">CARRY IT WITH YOU <span id="recall-reference"></span></span><p id="recall-prompt"></p><div id="recall-options"></div><div id="recall-feedback" role="status">Complete the verse for a 100-point bonus.</div></div><button class="primary-button" id="restart-button">Run again <span aria-hidden="true">↻</span></button><button class="text-button" id="back-button">Back to the path</button></div></div>
+        <div class="touch-controls hidden" id="touch-controls"><button id="touch-slide" aria-label="Slide">↓ <span>SLIDE</span></button><button id="touch-jump" aria-label="Jump">↑ <span>JUMP</span></button></div>
+      </div>
+      <div class="game-toolbar"><div class="keyboard-controls"><span><kbd>SPACE</kbd><span class="or">/</span><kbd>↑</kbd> Jump</span><span><kbd>↓</kbd><span class="or">/</span><kbd>S</kbd> Slide</span><span><kbd>P</kbd> Pause</span></div><div class="speed-indicator"><span class="speed-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><strong id="speed">1.0×</strong> <span>PACE</span></div></div>
+    </section>
+    <section class="verse-strip" aria-label="Scripture for this journey"><div class="verse-symbol" aria-hidden="true">✧</div><div class="verse-copy"><span class="eyebrow">YOUR WORD FOR THE JOURNEY <span class="translation-tag">KJV</span></span><blockquote id="journey-verse">“Finally, my brethren, be strong in the Lord, and in the power of his might.”</blockquote><cite id="journey-reference">EPHESIANS 6:10</cite><div class="verse-navigation"><button class="verse-browser-button" id="previous-verse" aria-label="Previous scripture passage">← Previous</button><span id="passage-position">Passage 1 of 72</span><button class="verse-browser-button" id="next-verse" aria-label="Next scripture passage">Next verse →</button></div></div><button class="verse-progress" id="verse-progress" aria-label="Browse the scripture library"><span class="progress-dots"><i></i><i></i><i></i><i></i></span><span id="fragment-progress">0 / 4 fragments collected</span><span class="progress-link">Browse all <span id="library-total">72</span> passages <span>↗</span></span></button></section>
+    <section class="journey-notes" aria-label="Game mechanics"><div><span class="note-icon">↗</span><div><h3>Find your flow</h3><p>Jump the rocks. Slide under branches.</p></div></div><div><span class="note-icon">✦</span><div><h3>Keep the light</h3><p>Collect light. Build combos. Go further.</p></div></div><div><span class="note-icon book-icon">☷</span><div><h3>Let the Word take root</h3><p>Gather scripture, one fragment at a time.</p></div></div></section>
+  </main>
+  <footer><span>THE NARROW PATH</span><span>A quiet kind of strength.</span><span>Your progress stays on this device <span aria-hidden="true">↗</span></span></footer>
+  <dialog id="info-dialog"><button class="dialog-close" id="dialog-close" aria-label="Close dialog">×</button><div id="dialog-content"></div></dialog>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
