@@ -314,6 +314,11 @@ export function createAudio() {
 
   function resume() {
     musicPaused = false;
+    if (!enabled || disposed) return;
+    if (context?.state !== 'running') {
+      context?.resume().then(startMusic).catch(() => {});
+      return;
+    }
     startMusic();
   }
 
